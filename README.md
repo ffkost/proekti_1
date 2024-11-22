@@ -36,3 +36,64 @@ How It Works
         If the user inputs 'n', the program stops. Otherwise, it generates a new walk.
 
 
+
+Project: Temperature Trends Visualization - Death Valley, CA (2021)
+Description
+
+This project visualizes daily high and low temperatures for Death Valley, California, in 2021. The data is read from a CSV file, processed, and plotted to show temperature variations over the year.
+Features
+
+    CSV Parsing:
+        Reads temperature data from a CSV file.
+        Handles missing or invalid data gracefully.
+    Date Handling:
+        Converts string dates to Python datetime objects for accurate plotting.
+    Data Visualization:
+        Plots high temperatures in red and low temperatures in blue.
+        Fills the area between high and low temperatures with a shaded region for visual emphasis.
+    Formatted Output:
+        Adds a descriptive title, axis labels, and formatted x-axis date labels.
+        Ensures readability with customized font sizes and transparency.
+
+How It Works
+
+    Data Extraction:
+        Reads the CSV file (death_valley_2021_simple.csv) line by line.
+        Extracts dates, high temperatures, and low temperatures from the file.
+        Handles missing or invalid data using a try-except block and skips over incomplete rows.
+    Plotting:
+        Uses matplotlib to create a line plot of high and low temperatures over time.
+        Highlights the range between high and low temperatures using a shaded region.
+    Output:
+        Displays the final visualization using plt.show().
+
+Requirements
+
+    Python 3.x
+    Libraries:
+        matplotlib
+        csv
+        datetime
+
+How to Run
+
+    Save the CSV file (death_valley_2021_simple.csv) in the same directory as the script.
+    Install the required libraries (if not already installed):
+
+pip install matplotlib
+
+Run the script:
+
+    python temperature_trends.py
+
+    View the plot of daily high and low temperatures for 2021.
+
+Example Output
+
+The script generates a plot with:
+
+    High temperatures shown as a red line.
+    Low temperatures shown as a blue line.
+    A shaded region between the high and low temperatures to highlight the daily range.
+
+This README is detailed and provides a clear overview of what the project does and how to use it.
