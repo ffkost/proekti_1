@@ -1,9 +1,107 @@
 # proekti_1
 
 
-#scatter_squares.py
-This project is a simple Python script that visualizes the relationship between numbers and their squares using a scatter plot. It demonstrates the use of the matplotlib library to create customizable and visually appealing charts. The script calculates the squares of numbers from 1 to 1000 and plots them as points on a graph.
+3D Parametric Formula Plotter
 
+This project is a Python script that generates 3D plots for user-defined mathematical formulas. It enables users to input up to 5 formulas using the variables x and z and visualizes their relationships in 3D space.
+Features
+
+    Dynamic Formula Evaluation:
+        Users can input mathematical expressions using Python functions like sin, cos, and exp.
+        Formulas can combine x and z variables to create complex parametric relationships.
+
+    3D Visualization:
+        Generates interactive 3D scatter plots for each formula.
+        Plots data points (x, y, z) and connects them with lines for a clear visual representation.
+
+    Multiple Formula Input:
+        Supports up to 5 formulas in one execution.
+        Each formula is displayed in a separate 3D plot.
+
+    Error Handling:
+        Provides user-friendly error messages if the input formula is invalid or cannot be evaluated.
+
+How It Works
+1. Input Mathematical Formulas
+
+    Users can input up to 5 formulas, separated by commas.
+    Example of valid formulas:
+        sin(x) + cos(z)
+        exp(-0.01*x) * sin(z)
+        x**4 + x**2
+
+2. Generate x and z Values
+
+    x values range from 0.1 to 100 (step 0.1) for a fine-grained resolution.
+    z values range from 0.02 to 20 (step 0.02).
+
+3. Evaluate Formulas
+
+    For each formula, the script evaluates the y values using the input expressions.
+    Dynamic evaluation is performed using Python’s eval() function.
+
+4. Plot in 3D
+
+    The evaluated x, y, and z values are visualized using Matplotlib's 3D plotting capabilities.
+    Each plot includes:
+        Purple scatter points representing the data.
+        A black connection line to show continuity.
+        Labels for axes and a title for the formula.
+
+Dependencies
+Python Libraries
+
+    Matplotlib: For creating 3D visualizations.
+    mpl_toolkits.mplot3d: A toolkit for 3D plotting in Matplotlib.
+    math: For mathematical operations like sin, cos, and exp.
+
+Install required dependencies using:
+
+pip install matplotlib
+
+Usage
+Step 1: Clone the Repository
+
+git clone https://github.com/<your-username>/3d-formula-plotter.git
+cd 3d-formula-plotter
+
+Step 2: Run the Script
+
+python 3d_plotter.py
+
+Step 3: Input Formulas
+
+    When prompted, input up to 5 formulas, separated by commas.
+    Example:
+
+    Enter formulas: sin(x) + cos(z), exp(-0.01*x) * sin(z)
+
+Step 4: View the Plots
+
+    The script generates a 3D scatter plot for each formula.
+    Rotate and zoom the plot for better visualization.
+
+Example Outputs
+Input:
+
+sin(x) + cos(z), x**2 - z**2, exp(-0.01*x) * sin(z)
+
+Generated Plots:
+
+    Plot 1: 3D visualization of sin(x) + cos(z).
+    Plot 2: 3D visualization of x**2 - z**2.
+    Plot 3: 3D visualization of exp(-0.01*x) * sin(z).
+
+Error Handling
+
+    If the input formula contains invalid syntax or unsupported operations, the script displays a clear error message:
+
+Error: Try again [error details]
+
+Examples of unsupported formulas:
+
+    Using variables other than x and z.
+    Using undefined functions or invalid expressions.
 
 Project: Random Walk Visualizer
 Description
